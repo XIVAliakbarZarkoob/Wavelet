@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2024.6.9)  9 NOV 2024 14:14
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2024.6.9)  15 NOV 2024 17:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -320,27 +320,27 @@ File: l3backend-xetex.def 2024-01-04 L3 backend support: XeTeX
 (./WaveletReport.aux)
 \openout1 = `WaveletReport.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 16.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 15.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 1
-6.
+5.
  (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -383,12 +383,12 @@ File: Fanni_Alt_BW_Logo.png Graphic file (type bmp)
 [1
 
 ]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 59.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 58.
 
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 59.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 58.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -423,13 +423,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [3]
 File: ../Tests/Outputs/1D_Signal.pdf Graphic file (type pdf)
 <use ../Tests/Outputs/1D_Signal.pdf>
-
-Overfull \hbox (5.69865pt too wide) in paragraph at lines 287--288
- [][] 
- []
-
 File: ../Tests/Outputs/HaarWavelet_SignalWithNoise.pdf Graphic file (type pdf)
 <use ../Tests/Outputs/HaarWavelet_SignalWithNoise.pdf>
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -478,9 +474,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [6]
-File: ../Tests/Outputs/Symlet3Wavelet_SignalWithNoise.pdf Graphic file (type pd
+File: ../Tests/Outputs/Symlet2Wavelet_SignalWithNoise.pdf Graphic file (type pd
 f)
-<use ../Tests/Outputs/Symlet3Wavelet_SignalWithNoise.pdf>
+<use ../Tests/Outputs/Symlet2Wavelet_SignalWithNoise.pdf>
 File: ../Tests/Outputs/CycleSlip_MainSignal.pdf Graphic file (type pdf)
 <use ../Tests/Outputs/CycleSlip_MainSignal.pdf>
 
@@ -507,8 +503,8 @@ File: ../Tests/Outputs/CycleSlip_MexicanHat.pdf Graphic file (type pdf)
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-File: ../Tests/Outputs/CycleSlip_Symlet3.pdf Graphic file (type pdf)
-<use ../Tests/Outputs/CycleSlip_Symlet3.pdf>
+File: ../Tests/Outputs/CycleSlip_Symlet2.pdf Graphic file (type pdf)
+<use ../Tests/Outputs/CycleSlip_Symlet2.pdf>
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -545,9 +541,12 @@ File: ../Tests/Outputs/2D_Image.pdf Graphic file (type pdf)
 <use ../Tests/Outputs/2D_Image.pdf>
 File: ../Tests/Outputs/2D_HaarWavelet_WithoutNoise.pdf Graphic file (type pdf)
 <use ../Tests/Outputs/2D_HaarWavelet_WithoutNoise.pdf>
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 File: ../Tests/Outputs/2D_HaarWavelet_SPNoise.pdf Graphic file (type pdf)
 <use ../Tests/Outputs/2D_HaarWavelet_SPNoise.pdf>
-
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -611,9 +610,20 @@ e pdf)
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-File: ../Tests/Outputs/2D_Symlet3Wavelet_WithoutNoise.pdf Graphic file (type pd
+File: ../Tests/Outputs/2D_Symlet2Wavelet_WithoutNoise.pdf Graphic file (type pd
 f)
-<use ../Tests/Outputs/2D_Symlet3Wavelet_WithoutNoise.pdf>
+<use ../Tests/Outputs/2D_Symlet2Wavelet_WithoutNoise.pdf>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: ../Tests/Outputs/2D_Symlet2Wavelet_SPNoise.pdf Graphic file (type pdf)
+<use ../Tests/Outputs/2D_Symlet2Wavelet_SPNoise.pdf>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: ../Tests/Outputs/2D_Symlet2Wavelet_GaussianNoise.pdf Graphic file (type p
+df)
+<use ../Tests/Outputs/2D_Symlet2Wavelet_GaussianNoise.pdf>
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -664,12 +674,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [14]
-File: ../Tests/Outputs/2D_Symlet3Wavelet_SPNoise.pdf Graphic file (type pdf)
-<use ../Tests/Outputs/2D_Symlet3Wavelet_SPNoise.pdf>
-File: ../Tests/Outputs/2D_Symlet3Wavelet_GaussianNoise.pdf Graphic file (type p
-df)
-<use ../Tests/Outputs/2D_Symlet3Wavelet_GaussianNoise.pdf>
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -678,19 +682,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[15
-
-] (./WaveletReport.aux)
+[15] (./WaveletReport.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 6099 strings out of 474878
- 118303 string characters out of 5762517
+ 6103 strings out of 474878
+ 118397 string characters out of 5762517
  1935627 words of memory out of 5000000
- 27994 multiletter control sequences out of 15000+600000
+ 27998 multiletter control sequences out of 15000+600000
  562794 words of font info for 64 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  94i,12n,93p,587b,257s stack positions out of 10000i,1000n,20000p,200000b,200000s

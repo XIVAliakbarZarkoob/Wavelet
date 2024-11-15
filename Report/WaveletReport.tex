@@ -2,7 +2,6 @@
 \usepackage{graphicx}
 \usepackage{setspace}
 \usepackage{fancyhdr}
-\usepackage{fancyhdr}
 \usepackage{amssymb}
 \usepackage{xcolor}
 \usepackage{amsmath}
@@ -84,7 +83,7 @@
 		\label{eq:1d_parts_n}
 	\end{equation}
 	
-	$V$ and $W$ in the equation \ref{eq:1d_wavelet_transform} are basis vectors that create the smooth and detail spaces. These basis vectors are created based on scaling function $\phi(x)$ and wavelet function $\psi(x)$. How these two functions are defined, separates different types of wavelets. In this report, 5 types of wavelets are used (Haar, Daubechies4, Daubechies6, Mexican Hat and Symlet3).
+	$V$ and $W$ in the equation \ref{eq:1d_wavelet_transform} are basis vectors that create the smooth and detail spaces. These basis vectors are created based on scaling function $\phi(x)$ and wavelet function $\psi(x)$. How these two functions are defined, separates different types of wavelets. In this report, 5 types of wavelets are used (Haar, Daubechies4, Daubechies6, Mexican Hat and Symlet2).
 
 	\subsection{Haar Wavelet}
 	
@@ -201,9 +200,9 @@
 		\label{eq:g_mh}
 	\end{equation}
 	
-	\subsection{Symlet3 Wavelet}
+	\subsection{Symlet2 Wavelet}
 	
-	The  $h$ and $g$ coefficients for Mexican Hat Wavelet are shown in the equations \ref{eq:h_sym3} and \ref{eq:g_sym3}.
+	The  $h$ and $g$ coefficients for Mexican Hat Wavelet are shown in the equations \ref{eq:h_sym2} and \ref{eq:g_sym2}.
 	
 	\begin{equation}
 		\begin{aligned}
@@ -211,7 +210,7 @@
 			h_2 &= 0.4598775021184915 \;,\; h_3 = -0.1350110200102546 \\
 			h_4 &= -0.0854412738820267 \;,\; h_5 = 0.0352262918857095
 		\end{aligned}
-		\label{eq:h_sym3}
+		\label{eq:h_sym2}
 	\end{equation}
 	
 	\begin{equation}
@@ -219,7 +218,7 @@
 			g_0 &= -h_5 \;,\; g_1 = h_4 \;,\; g_2 = -h_3 \\
 			g_3 &= h_2 \;,\; g_4 = -h_1 \;,\; g_5 = h_0
 		\end{aligned}
-		\label{eq:g_sym3}
+		\label{eq:g_sym2}
 	\end{equation}
 	
 	\section{Two-Dimensional Wavelets}
@@ -275,10 +274,11 @@
 	
 	\subsubsection{Noise Reduction}
 	
-	A 1D signal is created with the equation \ref{eq:1d_signal}. Then white noise with the standard deviation of 1 is added to the signal. the created signal before and after adding noise is shown in the figure \ref{fig:1d_signal}.
+	A 1D signal is created with the equation \ref{eq:1d_signal}. Then white noise with the standard deviation of 1 is added to the signal. The created signal before and after adding noise is shown in the figure \ref{fig:1d_signal}.
 	
 	\begin{equation}
-		f(x)=2x^2 + 10\sin(4x) + \cos^2(x^2)
+%		f(x)=2x^2 + 10\sin(4x) + \cos^2(x^2)
+		f(x) = 25sin(2\pi(0.5 +5x)x)
 		\label{eq:1d_signal}
 	\end{equation}
 	
@@ -289,7 +289,7 @@
 		\label{fig:1d_signal}
 	\end{figure}
 	
-	The results for 5 mentioned wavelets are shown in the figures \ref{fig:1d_haar} to \ref{fig:1d_sym3}.
+	The results for 5 mentioned wavelets are shown in the figures \ref{fig:1d_haar} to \ref{fig:1d_sym2}.
 	
 	\begin{figure}[!h]
 		\centering
@@ -322,15 +322,15 @@
 	\clearpage
 	\begin{figure}[!h]
 		\centering
-		\includegraphics[height=11cm]{../Tests/Outputs/Symlet3Wavelet_SignalWithNoise.pdf}
-		\caption{Results of Symlet3 wavelet on the simulated signal.}
-		\label{fig:1d_sym3}
+		\includegraphics[height=11cm]{../Tests/Outputs/Symlet2Wavelet_SignalWithNoise.pdf}
+		\caption{Results of Symlet2 wavelet on the simulated signal.}
+		\label{fig:1d_sym2}
 	\end{figure}
 	
 	For checking the results of each wavelets used, difference between the main signal is calculated from the equation \ref{eq:error}.
 	
 	\begin{equation}
-		e^k = \|f-D^k\|_2
+		e^k = \|f-S^k\|_2
 		\label{eq:error}
 	\end{equation}
 	
@@ -340,22 +340,22 @@
 		\vspace{0.3cm}
 		\renewcommand{\arraystretch}{1.4}
 		\begin{tabular}{c|c|c|c|c|c}
-			\textbf{Level} & \textbf{Haar} & \textbf{Daubechies4} & \textbf{Daubechies6} & \textbf{Mexican Hat} & \textbf{Symlet3} \\
+			\textbf{Level} & \textbf{Haar} & \textbf{Daubechies4} & \textbf{Daubechies6} & \textbf{Mexican Hat} & \textbf{Symlet2} \\
 			\hline 
-			1 & 18.4707 & 28.4802 & 45.5117 & 92.1182 & 45.5119 \\
-			2 & \textcolor{blue}{14.9577} & 39.4772 & 61.5268 & 94.2667 & 61.5268 \\
-			3 & 18.4413 & 57.2383 & 93.5517 & 119.8591 & 93.5517 \\
-			4 & 33.5126 & 82.9160 & 126.2475 & 151.4533 & 126.2475 \\
-			5 & 65.3029 & 120.1642 & 162.3870 & 201.8784 & 162.3870 \\
+			1 & \textcolor{blue}{22.3967} & 16.1461 & 15.9328 & 16.2191 & 14.7038 \\
+			2 & 35.8193 & \textcolor{blue}{12.1606} & \textcolor{green}{10.8583} & \textcolor{blue}{12.2734} & \textcolor{blue}{11.8964} \\
+			3 & 69.8424 & 23.5287 & 11.0108 & 22.1990 & 22.4478 \\
+			4 & 135.3934 & 80.7993 & 49.7569 & 74.2519 & 73.6403 \\
+			5 & 267.9761 & 202.0768 & 146.3352 & 159.4626 & 201.1597 \\
 		\end{tabular}
 		\label{tab:errors}
 	\end{table}
 	
-	As shown in the table \ref{tab:errors}, best result was achieved with level 2 of Haar Wavelet.
+	As shown in the table \ref{tab:errors}, best result was achieved with level 2 of Daubechies6 Wavelet.
 	
 	\subsubsection{GNSS Signal Cycle Slip Detection}
 	
-	The studied signal is for GPS PRN03 which is shown in the figure \ref{fig:GPS_Signal}. Results for 5 mentioned wavelets are shown in the figures \ref{fig:cs_haar} to \ref{fig:cs_sym3}.
+	The studied signal is for GPS PRN03 which is shown in the figure \ref{fig:GPS_Signal}. This signal contains two cycle slips occurred in indices of 119 and 374 (times are 5.9583 and 7.2500 hour of day). Results for 5 mentioned wavelets are shown in the figures \ref{fig:cs_haar} to \ref{fig:cs_sym2}. 
 	
 	\begin{figure}[!h]
 		\centering
@@ -394,21 +394,46 @@
 	
 	\begin{figure}[!h]
 		\centering
-		\includegraphics[height=7cm]{../Tests/Outputs/CycleSlip_Symlet3.pdf}
-		\caption{Results of Symlet3 wavelet on GPS signal.}
-		\label{fig:cs_sym3}
+		\includegraphics[height=7cm]{../Tests/Outputs/CycleSlip_Symlet2.pdf}
+		\caption{Results of Symlet2 wavelet on GPS signal.}
+		\label{fig:cs_sym2}
 	\end{figure}
 	\clearpage
 	
-	As it's understandable from the figures, cycle slip can only be seen in the detail parts of Haar and Daubechies4. By finding the absolute maximum value of detail part in level 1 for the metioned wavelets, cycle slip has happened in the time index of 374 (7.25 hour of day).
+	As can be seen from the figures, the first cycle slip, which is smaller in magnitude, is not detectable in the Haar details of levels 1 and 2, but it can be detected in the other four wavelets. To determine the timing of occurred cycle slips from the detail components, a 3-sigma test was applied using equation \ref{eq:CycleSlip_idx}. Values falling within this range were identified as cycle slips. Results are shown in the table \ref{tab:CycleSlips}.
+	
+	\begin{equation}
+		\begin{gathered}
+			cs > \mu_D + 3\sigma_D^2 \\
+			cs < \mu_D - 3\sigma_D^2
+		\end{gathered}
+		\label{eq:CycleSlip_idx}
+	\end{equation}
+	
+	\begin{table}[h!]
+		\centering
+		\caption{Detected cycle slips from implemented wavelets.}
+		\vspace{0.3cm}
+		\renewcommand{\arraystretch}{1.4}
+		\begin{tabular}{c|c|c}
+			\textbf{Wavelet} & \textbf{Indices} & \textbf{Times (hour of day)} \\
+			\hline 
+			\text{Haar} & \text{374, 375} & \text{7.25, 7.26} \\
+			\text{Daubechies4} & \text{220, 373, 374, 375, 375, 376} & \text{5.97, 7.24, 7.25, 7.26, 7.27} \\
+			\text{Daubechies6} & \text{219, 220, 373, 374, 375} & \text{5.96, 5.97, 7.24, 7.25, 7.26} \\
+			\text{Mexican Hat} & \text{219, 373, 374, 375, 376} & \text{5.96, 7.24, 7.25, 7.26, 7.27} \\
+			\text{Symlet2} & \text{219, 373, 374, 375, 376} & \text{5.96, 7.24, 7.25, 7.26, 7.27} \\
+		\end{tabular}
+		\label{tab:CycleSlips}
+	\end{table}
 	
 	\subsection{Two-Dimensional}
 	
-	The studied Image is shown in figure \ref{fig:2d_image}. Two types of noise are added to this image (salt\&pepper and Gaussian). Results for different types of wavelets are shown in the figures \ref{fig:2d_haar} to \ref{fig:2d_sym3_gs}
+	The studied Image is shown in figure \ref{fig:2d_image}. Two types of noise are added to this image (salt\&pepper and Gaussian). Results for different types of wavelets are shown in the figures \ref{fig:2d_haar} to \ref{fig:2d_sym2_gs}
 	
 	\begin{figure}[!h]
 		\centering
-		\includegraphics[height=5cm]{../Tests/Outputs/2D_Image.pdf}
+		\includegraphics[height=5.5cm]{../Tests/Outputs/2D_Image.pdf}
 		\caption{Original image alongside noisy images.}
 		\label{fig:2d_image}
 	\end{figure}
@@ -501,27 +526,27 @@
 		\label{fig:2d_mh_gs}
 	\end{figure}
 	
-	% Symlet3
+	% Symlet2
 	\begin{figure}[!h]
 		\centering
-		\includegraphics[height=7cm]{../Tests/Outputs/2D_Symlet3Wavelet_WithoutNoise.pdf}
-		\caption{Results of Symlet3 wavelet on original image.}
-		\label{fig:2d_sym3}
+		\includegraphics[height=7cm]{../Tests/Outputs/2D_Symlet2Wavelet_WithoutNoise.pdf}
+		\caption{Results of Symlet2 wavelet on original image.}
+		\label{fig:2d_sym2}
+	\end{figure}
+	
+	\begin{figure}[!h]
+		\centering
+		\includegraphics[height=7cm]{../Tests/Outputs/2D_Symlet2Wavelet_SPNoise.pdf}
+		\caption{Results of Symlet2 wavelet on image with s\&p noise.}
+		\label{fig:2d_sym2_sp}
+	\end{figure}
+	
+	\begin{figure}[!h]
+		\centering
+		\includegraphics[height=7cm]{../Tests/Outputs/2D_Symlet2Wavelet_GaussianNoise.pdf}
+		\caption{Results of Symlet2 wavelet on image with Gaussian noise.}
+		\label{fig:2d_sym2_gs}
 	\end{figure}
 	\clearpage
-	\begin{figure}[!h]
-		\centering
-		\includegraphics[height=7cm]{../Tests/Outputs/2D_Symlet3Wavelet_SPNoise.pdf}
-		\caption{Results of Symlet3 wavelet on image with s\&p noise.}
-		\label{fig:2d_sym3_sp}
-	\end{figure}
-	
-	\begin{figure}[!h]
-		\centering
-		\includegraphics[height=7cm]{../Tests/Outputs/2D_Symlet3Wavelet_GaussianNoise.pdf}
-		\caption{Results of Symlet3 wavelet on image with Gaussian noise.}
-		\label{fig:2d_sym3_gs}
-	\end{figure}
-	
 
 \end{document}

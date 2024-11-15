@@ -22,6 +22,13 @@ def Wavelet_1D(Signal, Type, Max_Dec_Level):
     elif Type.lower() == 'sym3':
         h = np.array([0.3326705529500826, 0.8068915093133388, 0.4598775021184915, -0.1350110200102546, -0.0854412738820267, 0.0352262918857095]).reshape(-1, 1)
         g = np.array([-0.0352262918857095, -0.0854412738820267, 0.1350110200102546, 0.4598775021184915, -0.8068915093133388, 0.3326705529500826]).reshape(-1, 1)
+    elif Type.lower() == 'sym2':
+        h = np.array([-0.12940952255092145, 0.2241438680420134, 0.836516303737469, 0.48296291314469025]).reshape(-1, 1)
+        g = np.array([-0.48296291314469025, 0.836516303737469, -0.2241438680420134, -0.12940952255092145]).reshape(-1, 1)
+    elif Type.lower() == 'csd':
+        # h = np.array([[-1], [-1], [2], [2], [-1], [-1]])
+        h = np.ones((6,1))/np.sqrt(18)
+        g = np.array([[1], [-1], [-2], [2], [1], [-1]])
     else:
         raise ValueError('The specified wavelet type is not supported in the current version of this function!')
 
@@ -40,10 +47,11 @@ def Wavelet_1D(Signal, Type, Max_Dec_Level):
             W_tmp = np.zeros((q, 1))
             if j*2+CoeffNum > q:
                 diff = j*2+CoeffNum - q
+                l = len(h)
                 V_tmp[:diff] = h[-diff:]
-                V_tmp[-diff:] = h[:diff]
+                V_tmp[-(l-diff):] = h[:(l-diff)]
                 W_tmp[:diff] = g[-diff:]
-                W_tmp[-diff:] = g[:diff]
+                W_tmp[-(l-diff):] = g[:(l-diff)]
             else:
                 V_tmp[j*2:j*2+CoeffNum] = h
                 W_tmp[j*2:j*2+CoeffNum] = g

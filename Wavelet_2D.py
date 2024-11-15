@@ -23,6 +23,10 @@ def Wavelet_2D(Image, Type, Max_Dec_Level):
         h = np.array([(1-np.sqrt(7))/(16*np.sqrt(2)), (5+np.sqrt(7))/(16*np.sqrt(2)), (14+2*np.sqrt(7))/(16*np.sqrt(2)), (14-2*np.sqrt(7))/(16*np.sqrt(2)), (1-np.sqrt(7))/(16*np.sqrt(2)), (-3+np.sqrt(7))/(16*np.sqrt(2))]).reshape(-1, 1)
         g = np.array([h[5], -h[4], h[3], -h[2], h[1], -h[0]]).reshape(-1, 1)
         TYPE = 'Mexican Hat'
+    elif Type.lower() == 'sym2':
+        h = np.array([-0.12940952255092145, 0.2241438680420134, 0.836516303737469, 0.48296291314469025]).reshape(-1, 1)
+        g = np.array([-0.48296291314469025, 0.836516303737469, -0.2241438680420134, -0.12940952255092145]).reshape(-1, 1)
+        TYPE = 'Symlet2'
     elif Type.lower() == 'sym3':
         h = np.array([0.3326705529500826, 0.8068915093133388, 0.4598775021184915, -0.1350110200102546, -0.0854412738820267, 0.0352262918857095]).reshape(-1, 1)
         g = np.array([-0.0352262918857095, -0.0854412738820267, 0.1350110200102546, 0.4598775021184915, -0.8068915093133388, 0.3326705529500826]).reshape(-1, 1)
@@ -46,10 +50,11 @@ def Wavelet_2D(Image, Type, Max_Dec_Level):
             W_tmp = np.zeros((BasisLen, 1))
             if i*2+CoeffNum > BasisLen:
                 diff = i*2+CoeffNum - BasisLen
+                l = len(h)
                 V_tmp[:diff] = h[-diff:]
-                V_tmp[-diff:] = h[:diff]
+                V_tmp[-(l-diff):] = h[:(l-diff)]
                 W_tmp[:diff] = g[-diff:]
-                W_tmp[-diff:] = g[:diff]
+                W_tmp[-(l-diff):] = g[:(l-diff)]
             else:
                 V_tmp[i*2:i*2+CoeffNum] = h
                 W_tmp[i*2:i*2+CoeffNum] = g
