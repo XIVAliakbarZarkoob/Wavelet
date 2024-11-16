@@ -25,10 +25,6 @@ def Wavelet_1D(Signal, Type, Max_Dec_Level):
     elif Type.lower() == 'sym2':
         h = np.array([-0.12940952255092145, 0.2241438680420134, 0.836516303737469, 0.48296291314469025]).reshape(-1, 1)
         g = np.array([-0.48296291314469025, 0.836516303737469, -0.2241438680420134, -0.12940952255092145]).reshape(-1, 1)
-    elif Type.lower() == 'csd':
-        # h = np.array([[-1], [-1], [2], [2], [-1], [-1]])
-        h = np.ones((6,1))/np.sqrt(18)
-        g = np.array([[1], [-1], [-2], [2], [1], [-1]])
     else:
         raise ValueError('The specified wavelet type is not supported in the current version of this function!')
 
